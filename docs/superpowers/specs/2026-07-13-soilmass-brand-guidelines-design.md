@@ -2,6 +2,11 @@
 
 Date: 2026-07-13
 Status: approved by Edison (visual companion session, all decisions validated interactively)
+Revision 2 (2026-07-13, later session): concept pivot — "curated from the
+deepest levels", tagline "The web, unearthed.", imagery register changed to
+excavation/curation, sections 13–14 added. The implementation in
+`guidelines/` and `index.html` predates this revision and is being rebuilt;
+where they disagree, this spec governs.
 
 ## 1. Purpose & scope
 
@@ -10,12 +15,17 @@ documentation project — a brand identity spec, **not** a code component
 library. The identity is built from scratch; nothing pre-exists except the
 name.
 
-**Brand concept:** "Engineered foundations for the web." Swiss International
-Typographic Style as the visual backbone (strict grid, large confident type,
-generous whitespace) with geotechnical motifs — grade lines, hatching, strata,
-dimension annotations — as signature details. The visuals are rigorous and
-precise; the written voice is deliberately warm and consultative. That
-contrast is intentional and must be preserved.
+**Brand concept (rev 2):** "Curated from the deepest levels." soilmass digs —
+through a client's business, users, and story — until it hits what nobody
+else finds, then surfaces it, curated. Three layers, all load-bearing:
+discovery that excavates the client's essence; craft selected from the
+deepest level of care; presentation with a curator's register. Swiss
+International Typographic Style remains the visual backbone (strict grid,
+large confident type, generous whitespace), with excavation motifs — strata,
+core samples, specimen plates, depth datums, catalogue annotations — as the
+signature details. The visuals are rigorous and precise; the written voice is
+deliberately warm and consultative. That contrast is intentional and must be
+preserved.
 
 **Audience:** broad — the brand must read as competence to both technical and
 non-technical clients.
@@ -161,8 +171,18 @@ wherever something is measured, numbered, or annotated.
 
 ## 7. Imagery & iconography
 
-**Graphic-first: no photography by default.** Visual interest comes from the
-devices above plus technical diagrams drawn in brand colors on grid paper.
+**Graphic-first: no photography by default.** Visual interest comes from
+drawn vector artwork in the excavation register.
+
+**Primary graphic language (rev 2, directional — Edison has marked this
+"still up in the air"; revisit before final art):** the **specimen plate** —
+a single find (faceted ochre fragment or equivalent) presented like a plate
+in an archaeology monograph: hairline double frame, ochre corner ticks,
+centered subject, mono catalogue caption ("PLATE VII — FINDING Nº 3 ·
+SURFACED FROM −42.0 M"). Case studies present each project as the next plate
+in the catalogue. Sanctioned secondary moves: the core-sample column
+(strata bands with the deepest band solid ochre, labeled as the find) and
+the dashed ochre leader line that carries a find from depth to the surface.
 
 **Photo escape hatch:** when a real photo is unavoidable (team headshots,
 client work screenshots), apply the ochre duotone treatment — grayscale,
@@ -177,7 +197,8 @@ on a 24px grid, ink by default; a single element per icon may be ochre.
 
 **Warm & consultative** — a deliberate counterweight to the precise visuals.
 
-- **Tagline:** `Solid ground for the web.`
+- **Tagline (rev 2):** `The web, unearthed.` (replaces "Solid ground for the
+  web."; the old line must not appear in rebuilt materials)
 - Principles:
   1. Explain like a trusted engineer-neighbor.
   2. Precision earns warmth — show numbers when we have them.
@@ -217,9 +238,51 @@ Four styled examples, each built with the real tokens:
 
 ## 12. Success criteria
 
-1. `guidelines/*.md` cover all eight sections with final values from this spec.
+1. `guidelines/*.md` cover all sections with final values from this spec.
 2. `index.html` opens in a browser and presents every section styled in-brand,
    including the four application examples.
 3. Logo SVGs render correctly with fonts unavailable (outlines/embedded).
 4. The two-tone wordmark, fallback, and favicon follow the size rules above.
 5. All body-size text in `index.html` passes AA contrast.
+6. (rev 2) No rebuilt material carries the old tagline or construction-era
+   imagery; sections 13–14 are documented in the guidelines and demonstrated
+   in `index.html`.
+
+## 13. Composition & craft (added rev 2)
+
+Rules that govern every layout, not just heroes. Approved interactively:
+
+1. **Measure is law.** Display lines carry at most three words, broken
+   editorially and balanced. Ledes run 45–55 characters. Nothing runs
+   wall-to-wall.
+2. **One graphic anchor per composition.** A drawn plate, a core sample, a
+   strata field, or annotated type — type alone is forbidden.
+3. **The annotation layer.** Every composition carries at least one mono
+   annotation that measures something real (a span, a depth, a catalogue
+   number).
+4. **Asymmetry.** Compose on the 12-column grid with deliberate offset; two
+   equal columns side-by-side are forbidden.
+5. **Rhythm.** Adjacent sections alternate canvases (paper / stone-100 /
+   ink); scale contrast of at least 4× between display and mono type is the
+   aesthetic engine.
+6. **Graphics are drawings, not decorations.** Every brand graphic is vector
+   linework following drafting conventions (line weights 0.75 / 1.5 / 2.5,
+   standard hatches, catalogue annotations) — never abstract filler shapes.
+
+## 14. Motion & scrollytelling (added rev 2)
+
+Scrollytelling is a brand primitive from day one. A working prototype was
+validated in the visual companion session.
+
+1. **Scroll is depth.** Pages descend: the further you scroll, the deeper
+   below grade you are. Scroll progress may render as a depth datum.
+2. **The canonical narrative is the dig (rev 2): descend → find → surface,
+   curated.** Scroll stories assemble drawings in that order, max four beats.
+3. **Drawings assemble, they don't animate.** Linework draws in, hatches
+   fill, annotations arrive with their data. No bouncing, no parallax
+   textures, no easing theatrics.
+4. **Native scroll only.** Never hijack the wheel; sticky stages with normal
+   scrolling. A beat must also read as a still.
+5. **Reduced motion = the finished drawing.** With
+   `prefers-reduced-motion`, every narrative shows its final state, static.
+   Content never depends on motion.
