@@ -26,6 +26,7 @@ PAIRS = [
     ("paper", "ochre-600", 4.5, "paper text on ochre-600 fill"),
     ("ochre-600", "ochre-100", 4.5, "ochre text on tint background"),
     ("ink", "ochre-100", 4.5, "ink text on tint background"),
+    ("ochre-600", "stone-100", 4.5, "ochre labels on panels"),
     ("stone-600", "stone-100", 4.5, "secondary text on panel"),
 ]
 

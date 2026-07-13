@@ -21,4 +21,5 @@
    Backdrop for diagrams and technical illustrations only.
 
 Use at most two devices per composition; the ground symbol counts as the
-composition's single ochre moment when hatched.
+composition's single ochre moment when hatched (exception: a hero may pair
+one ochre CTA with a ground symbol at opposite ends, per section 07).

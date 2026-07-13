@@ -11,7 +11,7 @@ ground symbol at the foot. Nothing else competes.
 ## Business card
 
 Front: two-tone wordmark centered on paper, generous clear space. Back:
-ink, mono contact block in paper text, strata bars bottom-left.
+ink, mono contact block in paper/stone-400 text, strata bars bottom-left.
 85.6 × 54 mm, square corners.
 
 ## Email signature

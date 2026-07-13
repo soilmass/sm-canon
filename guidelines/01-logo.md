@@ -10,7 +10,7 @@ horizontal "grade line" of background color cuts through the letters:
 - Background-colored gap from **81.5% to 85.6%** (≈4% of wordmark height).
 - Earth ochre `#C98A12` from **85.6%** to the baseline — a thin footing.
 
-Percentages are measured on the full wordmark bounding box, ascender of "l"
+Percentages are measured on the inked wordmark bounding box, ascender of "l"
 included. Word recognition relies on the upper half of letterforms, so the
 intact top 81.5% keeps the mark instantly legible; the ochre band below the
 grade line is the brand story — mass below grade.

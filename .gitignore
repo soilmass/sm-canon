@@ -1,3 +1,4 @@
 .superpowers/
 tools/fonts/
 tools/.venv/
+.playwright-mcp/

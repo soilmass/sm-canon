@@ -24,4 +24,4 @@ Mobile: Display and H1 scale down fluidly (clamp between roughly 60% and
   annotations — anything measured or numbered. Ochre labels use ochre-600
   on paper, ochre-500 on dark.
 - Headings and UI text are sentence case. Only labels are uppercase.
-- Never use Archivo 900 below H1 sizes; never set body text in the mono.
+- Never use Archivo 900 below H1 sizes (the wordmark excepted); never set body text in the mono.
