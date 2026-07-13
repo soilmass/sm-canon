@@ -17,10 +17,10 @@ OUT = ROOT / "assets"
 
 INK, PAPER, OCHRE = "#191714", "#FAF9F6", "#C98A12"
 TRACKING_EM = -0.03   # spec: letter-spacing -0.03em
-CUT_TOP = 0.71        # grade line starts at 71% of wordmark height
-CUT_BOTTOM = 0.74     # ochre band starts at 74%
-FAV_CUT_TOP = 0.685   # favicon gap optically enlarged to ~7%
-FAV_CUT_BOTTOM = 0.755
+CUT_TOP = 0.815      # grade line starts at 81.5% of inked wordmark height
+CUT_BOTTOM = 0.856    # ochre band starts at 85.6%
+FAV_CUT_TOP = 0.745   # favicon gap optically enlarged to ~7%
+FAV_CUT_BOTTOM = 0.815
 
 
 def load_font() -> TTFont:
