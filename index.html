@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soilmass — brand guidelines</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF9F6; --stone-100:#F0EEE8; --stone-200:#E8E5DE; --stone-300:#D8D4CC;
+  --stone-400:#A8A29A; --stone-500:#78736A; --stone-600:#59544B; --ink:#191714;
+  --ochre-100:#F7EBD3; --ochre-500:#C98A12; --ochre-600:#8F620B;
+  --sans:'Archivo',Arial,sans-serif; --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box;border-radius:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 16px/26px var(--sans)}
+main{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-top:1px solid var(--stone-200)}
+p{max-width:70ch}
+p+p{margin-top:16px}
+a{color:var(--ochre-600)}
+h1{font:900 clamp(28px,5vw,40px)/1.1 var(--sans);letter-spacing:-.02em;margin-bottom:32px}
+h2{font:600 28px/34px var(--sans);margin:48px 0 16px}
+h3{font:600 20px/28px var(--sans);margin:32px 0 8px}
+.display{font:900 clamp(40px,7vw,64px)/1.06 var(--sans);letter-spacing:-.03em}
+.small{font:400 14px/22px var(--sans);color:var(--stone-600)}
+.label{font:400 12px/16px var(--mono);text-transform:uppercase;letter-spacing:.12em;color:var(--ochre-600)}
+.label--quiet{color:var(--stone-600)}
+/* header */
+header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--stone-200);z-index:9}
+header .bar{max-width:1200px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+header img{height:28px;display:block}
+header nav{display:flex;gap:16px;flex-wrap:wrap}
+header nav a{font:400 12px/16px var(--mono);text-transform:uppercase;letter-spacing:.12em;text-decoration:none}
+/* devices */
+.ground{border-top:3px solid var(--ink);height:16px;
+  background:repeating-linear-gradient(135deg,transparent 0 4px,rgba(201,138,18,.55) 4px 6px)}
+.strata span{display:block;width:44px;background:var(--ink)}
+.strata span:nth-child(1){height:5px;background:var(--ochre-500)}
+.strata span:nth-child(2){height:8px;margin-top:3px}
+.strata span:nth-child(3){height:12px;margin-top:3px}
+.dim{display:flex;align-items:center;color:var(--ochre-600)}
+.dim i{width:2px;height:10px;background:currentColor}
+.dim b{flex:1;height:2px;background:currentColor}
+.dim .label{color:inherit;padding:0 8px}
+.grid-paper{background-image:linear-gradient(rgba(25,23,20,.08) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(25,23,20,.08) 1px,transparent 1px);background-size:24px 24px}
+/* components */
+.btn{display:inline-block;background:var(--ochre-500);color:var(--ink);
+  font:600 14px/1 var(--sans);padding:14px 24px;text-decoration:none}
+.panel{background:var(--stone-100);padding:24px}
+.dark{background:var(--ink);color:var(--paper)}
+.cols{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.swatches{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(110px,1fr))}
+.swatch .chip{height:56px;border:1px solid var(--stone-200)}
+.swatch .hx{font:400 11px/16px var(--mono);color:var(--stone-600);margin-top:4px}
+table{border-collapse:collapse;width:100%;margin:16px 0}
+td,th{border:1px solid var(--stone-200);padding:8px 12px;text-align:left;font-size:14px;line-height:22px}
+th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--stone-600)}
+figure figcaption{margin-top:8px}
+footer{border-top:1px solid var(--stone-200);padding:48px 24px;text-align:center}
+@media (max-width:600px){section{padding:48px 0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a href="#top"><img src="assets/logo-light.svg" alt="soilmass"></a>
+    <nav>
+      <a href="#overview">00 Overview</a><a href="#logo">01 Logo</a>
+      <a href="#color">02 Color</a><a href="#typography">03 Type</a>
+      <a href="#layout">04 Layout</a><a href="#imagery">05 Imagery</a>
+      <a href="#voice">06 Voice</a><a href="#applications">07 Applications</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+
+<section id="overview" style="border-top:0">
+<!-- §00 -->
+<p class="label">00 / Overview</p>
+<p class="display" style="margin:24px 0">Solid ground<br>for the web.</p>
+<p>soilmass is a web agency. The name is a geotechnical term: the body of
+earth an engineer tests before anything is built on it. That is the promise
+of the brand — websites that stand on measured, solid ground.</p>
+<p>The visual language is Swiss International Typographic Style — strict
+grid, large confident type, generous whitespace — detailed with geotechnical
+motifs: grade lines, hatching, strata, dimension annotations. The visuals
+carry the rigor; the words carry the warmth. Keep both; the brand breaks if
+either side wins.</p>
+<div class="ground" style="margin-top:48px"></div>
+<!-- /§00 -->
+</section>
+
+<section id="logo"><!-- §01 --><!-- /§01 --></section>
+<section id="color"><!-- §02 --><!-- /§02 --></section>
+<section id="typography"><!-- §03 --><!-- /§03 --></section>
+<section id="layout"><!-- §04 --><!-- /§04 --></section>
+<section id="imagery"><!-- §05 --><!-- /§05 --></section>
+<section id="voice"><!-- §06 --><!-- /§06 --></section>
+<section id="applications"><!-- §07 --><!-- /§07 --></section>
+
+</main>
+<footer>
+  <p class="label label--quiet">soilmass — brand guidelines · canonical source: /guidelines · generated assets: /assets</p>
+</footer>
+</body>
+</html>
