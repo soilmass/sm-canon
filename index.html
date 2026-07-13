@@ -96,8 +96,67 @@ either side wins.</p>
 <!-- /§00 -->
 </section>
 
-<section id="logo"><!-- §01 --><!-- /§01 --></section>
-<section id="color"><!-- §02 --><!-- /§02 --></section>
+<section id="logo"><!-- §01 -->
+<p class="label">01 / Logo</p>
+<h1>The grade-gap wordmark</h1>
+<p>Lowercase <strong>soilmass</strong>, Archivo 900, letter-spacing −0.03em.
+A horizontal grade line of background color cuts the letters at 81.5–85.6%
+of the wordmark height; below it, the mass sits in earth ochre. You read
+words from the tops of letters, so the intact upper letterforms keep the mark instantly
+legible — the ochre band is the story, not the information.</p>
+<div class="cols" style="margin-top:32px">
+  <figure><div style="padding:48px 24px;border:1px solid var(--stone-200);text-align:center">
+    <img src="assets/logo-light.svg" alt="soilmass wordmark, light version" style="height:56px;max-width:100%">
+  </div><figcaption class="label label--quiet">On paper — assets/logo-light.svg</figcaption></figure>
+  <figure><div class="dark" style="padding:48px 24px;text-align:center">
+    <img src="assets/logo-dark.svg" alt="soilmass wordmark, dark version" style="height:56px;max-width:100%">
+  </div><figcaption class="label label--quiet">On ink — assets/logo-dark.svg</figcaption></figure>
+</div>
+<h2>Variants &amp; size rules</h2>
+<table>
+  <tr><th>Context</th><th>Use</th></tr>
+  <tr><td>≥ 26 px tall</td><td>Two-tone grade-gap wordmark</td></tr>
+  <tr><td>&lt; 26 px tall</td><td><img src="assets/wordmark-small.svg" alt="soilmass." style="height:16px;vertical-align:middle"> solid fallback — wordmark-small.svg</td></tr>
+  <tr><td>Favicon / avatar</td><td><img src="assets/favicon.svg" alt="favicon tile" style="height:24px;vertical-align:middle"> ink tile, grade-gap "s", gap optically enlarged to ~7%</td></tr>
+  <tr><td>Single color</td><td><img src="assets/logo-mono.svg" alt="mono wordmark" style="height:20px;vertical-align:middle"> one color, gap retained — logo-mono.svg</td></tr>
+</table>
+<h2>Rules</h2>
+<p>Clear space: ½ wordmark height on all sides. Never recolor, rotate,
+stretch, add effects, or place the two-tone mark on busy backgrounds.
+The ochre band is exempt from text contrast rules (WCAG 1.4.3, logotypes).</p>
+<!-- /§01 --></section>
+<section id="color"><!-- §02 -->
+<p class="label">02 / Color</p>
+<h1>Warm stone, one ochre</h1>
+<h2>Neutrals</h2>
+<div class="swatches">
+  <div class="swatch"><div class="chip" style="background:var(--paper)"></div><div class="hx">paper<br>#FAF9F6</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-100)"></div><div class="hx">stone-100<br>#F0EEE8</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-200)"></div><div class="hx">stone-200<br>#E8E5DE</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-300)"></div><div class="hx">stone-300<br>#D8D4CC</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-400)"></div><div class="hx">stone-400<br>#A8A29A</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-500)"></div><div class="hx">stone-500<br>#78736A</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--stone-600)"></div><div class="hx">stone-600<br>#59544B</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--ink)"></div><div class="hx">ink<br>#191714</div></div>
+</div>
+<h2>Ochre</h2>
+<div class="swatches" style="max-width:420px">
+  <div class="swatch"><div class="chip" style="background:var(--ochre-100)"></div><div class="hx">ochre-100<br>#F7EBD3</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--ochre-500)"></div><div class="hx">ochre-500<br>#C98A12</div></div>
+  <div class="swatch"><div class="chip" style="background:var(--ochre-600)"></div><div class="hx">ochre-600<br>#8F620B</div></div>
+</div>
+<h2>Rules</h2>
+<p><strong>Ochre is punctuation, never flood</strong> — one ochre moment per
+composition. Body text on paper is ink or stone-600 only. Ochre text on
+paper always uses ochre-600 (ochre-500 on paper is 2.80:1 — fails AA at any
+size); ochre-500 type is reserved for dark backgrounds (6.07:1). Text on
+ochre-500 fills is always ink, never paper. Every documented pair is
+enforced by <code>tools/check_contrast.py</code>.</p>
+<div class="cols" style="margin-top:24px">
+  <div class="panel"><p class="label" style="margin-bottom:8px">✓ Button</p><span class="btn">Start a project</span></div>
+  <div class="panel dark" style="background:var(--ink)"><p class="label" style="color:var(--ochre-500);margin-bottom:8px">✓ Ochre type on dark</p><p class="display" style="font-size:28px;line-height:1.2;color:var(--ochre-500)">6.07:1</p></div>
+</div>
+<!-- /§02 --></section>
 <section id="typography"><!-- §03 --><!-- /§03 --></section>
 <section id="layout"><!-- §04 --><!-- /§04 --></section>
 <section id="imagery"><!-- §05 --><!-- /§05 --></section>
