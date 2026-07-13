@@ -60,6 +60,10 @@ color cuts through the letterforms:
 - A background-colored gap from **71% to 74%** (3% of wordmark height).
 - Earth ochre `#C98A12` from **74%** to the baseline.
 
+All percentages are measured on the full wordmark bounding box, ascender of
+"l" included. (The ochre band on paper sits below AA contrast; that is
+acceptable — logotypes are exempt under WCAG 1.4.3.)
+
 Rationale (validated visually): word recognition relies on the upper half of
 letterforms; keeping the top ~70% in a single dark color preserves full
 legibility while the ochre band carries the "grounded / below grade" concept.
@@ -70,11 +74,11 @@ legibility while the ochre band carries the "grounded / below grade" concept.
 |---|---|
 | ≥ 26 px tall | Two-tone grade-gap wordmark (light or dark version) |
 | < 26 px tall | Solid fallback: single-color `soilmass` + ochre full stop (`soilmass.`) |
-| Favicon / avatar | Dedicated tile: ink square, grade-gap lowercase "s" (paper + ochre) |
+| Favicon / avatar | Dedicated tile: ink square, grade-gap lowercase "s" (paper + ochre). The tile's gap is optically enlarged to ~7% of the glyph height so it survives 16px rendering |
 | Single-color reproduction | `logo-mono.svg`: one color, the 3% gap retained (the gap alone carries the concept) |
 
 **Rules:**
-- Clear space: ½ cap-height on all sides, minimum.
+- Clear space: ½ of the wordmark height on all sides, minimum.
 - Never: recolor, rotate, add effects (shadows, gradients, outlines), place
   the two-tone mark on busy or low-contrast backgrounds, or stretch.
 - SVG files must render correctly without the viewer having Archivo installed
@@ -93,7 +97,7 @@ Warm stone neutrals + a single ochre accent. All values final:
 | stone-200 | `#E8E5DE` | borders, dividers |
 | stone-300 | `#D8D4CC` | disabled, faint rules |
 | stone-400 | `#A8A29A` | placeholder, faint text on dark |
-| stone-500 | `#78736A` | secondary UI text (large) |
+| stone-500 | `#78736A` | secondary text at large sizes only (4.47:1 — below AA-normal) |
 | stone-600 | `#59544B` | secondary text, captions |
 | ink | `#191714` | primary text, dark backgrounds |
 
@@ -102,14 +106,17 @@ Warm stone neutrals + a single ochre accent. All values final:
 | Token | Hex | Use |
 |---|---|---|
 | ochre-100 | `#F7EBD3` | tint backgrounds, highlights |
-| ochre-500 | `#C98A12` | graphic devices, large display type, logo band |
-| ochre-600 | `#8F620B` | links and small/body-size ochre text (AA on paper) |
+| ochre-500 | `#C98A12` | graphic devices, logo band, fills, type on dark backgrounds only |
+| ochre-600 | `#8F620B` | all ochre text on paper, any size (5.09:1, AA) |
 
 **Rules:**
 - Ochre is punctuation, never flood — one ochre moment per composition.
 - Body text on paper is ink or stone-600 only.
-- Ochre-colored text at body/small sizes must use ochre-600 (contrast ≥ AA on
-  paper); ochre-500 is reserved for graphics and large display type.
+- Ochre **text** on paper always uses ochre-600, at every size — ochre-500 on
+  paper is 2.80:1 and fails AA even for large type. Ochre-500 type is allowed
+  only on ink/dark backgrounds (6.07:1).
+- Text on ochre-500 fills (buttons, highlights) is always ink (6.07:1) —
+  never paper (2.80:1). Paper text is allowed on ochre-600 fills (5.09:1).
 - No other hues. No pure white `#FFFFFF` or pure black `#000000`.
 
 ## 5. Typography
@@ -143,8 +150,8 @@ wherever something is measured, numbered, or annotated.
      (5 / 8 / 12px), top bar ochre, lower bars ink.
   3. **Dimension callout** — end ticks + rule + centered mono label
      (ochre-600), used to annotate measurements.
-  4. **Grid paper** — faint square grid background (ink at 6–8% opacity,
-     20–24px cell) for diagram areas.
+  4. **Grid paper** — faint square grid background (ink at 8% opacity,
+     24px cell) for diagram areas.
 
 ## 7. Imagery & iconography
 
@@ -179,7 +186,8 @@ on a 24px grid, ink by default; a single element per icon may be ochre.
 
 Four styled examples, each built with the real tokens:
 
-1. **Website hero** — display type, tagline, ground symbol, one ochre CTA.
+1. **Website hero** — display type, tagline, ground symbol, one ochre CTA
+   (ink text on ochre-500 fill, per the color rules).
 2. **Business card** — front: two-tone wordmark; back: mono contact block on ink.
 3. **Email signature** — HTML-safe: solid fallback wordmark, mono labels.
 4. **Social banner** — dark, strata bars, tagline.
