@@ -55,13 +55,19 @@ of the system.
 Black (900), letter-spacing −0.03em. A horizontal "grade line" of background
 color cuts through the letterforms:
 
-- Ink (or paper, on dark) from the top of the letters down to **71%** of the
+- Ink (or paper, on dark) from the top of the letters down to **81.5%** of the
   wordmark height.
-- A background-colored gap from **71% to 74%** (3% of wordmark height).
-- Earth ochre `#C98A12` from **74%** to the baseline.
+- A background-colored gap from **81.5% to 85.6%** (≈4% of wordmark height;
+  equals 3% of the em).
+- Earth ochre `#C98A12` from **85.6%** to the baseline — a thin footing of
+  roughly 18% of the x-height letters' body.
 
-All percentages are measured on the full wordmark bounding box, ascender of
-"l" included. (The ochre band on paper sits below AA contrast; that is
+All percentages are measured on the inked wordmark bounding box, ascender of
+"l" included. (Derivation: the approved mockups cut at 71–74% of the CSS em
+box; with Archivo's metrics — upm 1000, hhea ascent 878/descent 210 — that
+grade line sits 124–94 font units above the baseline, which is 81.5–85.6% of
+the inked bounding box. The favicon "s" tile uses 74.5–81.5% of the s-glyph
+bounding box: same line, gap widened to ~7%.) (The ochre band on paper sits below AA contrast; that is
 acceptable — logotypes are exempt under WCAG 1.4.3.)
 
 Rationale (validated visually): word recognition relies on the upper half of

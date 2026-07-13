@@ -18,7 +18,7 @@
 - Type scale (desktop px, size/leading): Display 64/68 Archivo 900 −0.03em · H1 40/44 Archivo 900 −0.02em · H2 28/34 Archivo 600 · H3 20/28 Archivo 600 · Body 16/26 Archivo 400, max 70ch · Small 14/22 stone-600 · Label 12/16 JetBrains Mono 400 UPPERCASE +0.12em.
 - Spacing steps: 4, 8, 16, 24, 32, 48, 64, 96, 128. Grid: 12 col / 1200px max / 24px gutters.
 - **Square corners everywhere — `border-radius` must not appear in any file.**
-- Logo geometry: ink (paper on dark) to 71% of wordmark height, background gap 71–74%, ochre `#C98A12` 74%–baseline; measured on the full bounding box, ascender included. Wordmark: lowercase `soilmass`, Archivo 900, tracking −0.03em. Favicon tile gap optically enlarged (~7% of glyph height).
+- Logo geometry: ink (paper on dark) to 81.5% of wordmark height, background gap 81.5–85.6%, ochre `#C98A12` 85.6%–baseline; measured on the inked bounding box, ascender included. Wordmark: lowercase `soilmass`, Archivo 900, tracking −0.03em. Favicon tile: cut at 74.5–81.5% of the s-glyph box (gap optically enlarged to ~7%).
 - Tagline, exact copy: `Solid ground for the web.`
 - Voice: warm & consultative (principles in spec §8).
 - Git: commit after every task; messages end with `Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>`.
@@ -197,10 +197,10 @@ OUT = ROOT / "assets"
 
 INK, PAPER, OCHRE = "#191714", "#FAF9F6", "#C98A12"
 TRACKING_EM = -0.03   # spec: letter-spacing -0.03em
-CUT_TOP = 0.71        # grade line starts at 71% of wordmark height
-CUT_BOTTOM = 0.74     # ochre band starts at 74%
-FAV_CUT_TOP = 0.685   # favicon gap optically enlarged to ~7%
-FAV_CUT_BOTTOM = 0.755
+CUT_TOP = 0.815       # grade line starts at 81.5% of inked wordmark height
+CUT_BOTTOM = 0.856    # ochre band starts at 85.6%
+FAV_CUT_TOP = 0.745   # favicon gap optically enlarged to ~7%
+FAV_CUT_BOTTOM = 0.815
 
 
 def load_font() -> TTFont:
@@ -485,14 +485,14 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 Lowercase `soilmass`, Archivo 900 (Black), letter-spacing −0.03em. A
 horizontal "grade line" of background color cuts through the letters:
 
-- Ink `#191714` (paper `#FAF9F6` on dark) from the top down to **71%** of
+- Ink `#191714` (paper `#FAF9F6` on dark) from the top down to **81.5%** of
   the wordmark height.
-- Background-colored gap from **71% to 74%** (3% of wordmark height).
-- Earth ochre `#C98A12` from **74%** to the baseline.
+- Background-colored gap from **81.5% to 85.6%** (≈4% of wordmark height).
+- Earth ochre `#C98A12` from **85.6%** to the baseline — a thin footing.
 
 Percentages are measured on the full wordmark bounding box, ascender of "l"
 included. Word recognition relies on the upper half of letterforms, so the
-intact top 71% keeps the mark instantly legible; the ochre band below the
+intact top 81.5% keeps the mark instantly legible; the ochre band below the
 grade line is the brand story — mass below grade.
 
 Files: `assets/logo-light.svg`, `assets/logo-dark.svg`.
@@ -921,9 +921,9 @@ Replace `<!-- §01 --><!-- /§01 -->` inside `<section id="logo">` with:
 <p class="label">01 / Logo</p>
 <h1>The grade-gap wordmark</h1>
 <p>Lowercase <strong>soilmass</strong>, Archivo 900, letter-spacing −0.03em.
-A horizontal grade line of background color cuts the letters at 71–74% of
-the wordmark height; below it, the mass sits in earth ochre. You read words
-from the tops of letters, so the intact top 71% keeps the mark instantly
+A horizontal grade line of background color cuts the letters at 81.5–85.6%
+of the wordmark height; below it, the mass sits in earth ochre. You read
+words from the tops of letters, so the intact upper letterforms keep the mark instantly
 legible — the ochre band is the story, not the information.</p>
 <div class="cols" style="margin-top:32px">
   <figure><div style="padding:48px 24px;border:1px solid var(--stone-200);text-align:center">
